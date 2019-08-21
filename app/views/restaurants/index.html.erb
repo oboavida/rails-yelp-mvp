@@ -1,0 +1,10 @@
+<div class="container">
+
+  <h2>List of Restaurants</h2>
+
+  <ul id="restaurant-list" class="list-unstyled">
+  <% @restaurants.each do |restaurant| %>
+    <li><%= link_to restaurant.name, restaurant  %></li>
+  <% end %>
+  </ul>
+</div>

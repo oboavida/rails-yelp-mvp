@@ -1,0 +1,11 @@
+<h1>Create a new restaurant</h1>
+
+<%= simple_form_for @restaurant, url: restaurants_path do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :category, collection: ["chinese", "italian", "japanese", "french", "belgian"]%>
+  <%= f.submit 'Create Restaurant', class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to 'Go back', restaurants_path %>
